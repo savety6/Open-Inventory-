@@ -11,8 +11,7 @@ const defaultState = [{
     code: '',
     key: 'blank-$',
     empty: true,
-    service: '',
-    write: ''
+    
 }]
 
 export default function index({children}) {

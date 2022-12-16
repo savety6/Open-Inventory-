@@ -97,15 +97,20 @@ body {
 .modal{
   width: clamp(50%, 700px, 90%);
   height: min(50%, 300px);
-  background-color: #fff;
+  
 
   margin: auto;
   padding: 0 2rem;
   border-radius: 12px;
   display: flex;
-  
+  z-index: 100;
 }
-
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;

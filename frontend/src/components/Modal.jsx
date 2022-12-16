@@ -23,7 +23,7 @@ const dropIn = {
     }
 }
 
-export default function Modal({handleClose, text}) {
+export default function Modal({handleClose, mode}) {
     return (
         <Backdrop onClick={handleClose}>
             <motion.div
@@ -34,7 +34,17 @@ export default function Modal({handleClose, text}) {
                 animate="visible"
                 exit="exit"
             >
-
+                {mode === 'item' ? 
+                    <div className='list'>
+                        <h1 >Add new Item!</h1> 
+                        <div className='list'>
+                            <input type="text" placeholder='name'/>
+                            <input type="text" placeholder='description'/>
+                        </div>
+                    </div>
+                : 
+                    <h1>Add new Colection!</h1>
+                } 
             </motion.div>
         </Backdrop>
     )
